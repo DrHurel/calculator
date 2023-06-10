@@ -56,11 +56,10 @@ export default function App() {
 
     <section>
       <h1 id="left">
-        <p>{display}{operator}</p>
-        <p>{toOperate}</p>
+        {display}
       </h1>
-      <p id="operator"></p>
-      <p id="right"></p>
+      <p id="operator">{operator}</p>
+      <p id="right">{toOperate}</p>
     </section>
 
     <section>

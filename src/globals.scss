@@ -192,10 +192,13 @@ body {
     }
 
     section {
+
+
       &:nth-child(2) {
         background-color: var(--screen-background);
         height: 20%;
         display: grid;
+
         grid-template-columns: 90% 10%;
         grid-template-rows: 1fr 1fr;
 
