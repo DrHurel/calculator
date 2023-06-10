@@ -1,0 +1,19 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.9.2",
+    "parcel": "^2.9.2",
+    "process": "^0.11.10"
+  },
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
