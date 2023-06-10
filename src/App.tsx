@@ -20,6 +20,18 @@ export default function App() {
 
   const addNumber = (number: string) => () => toEdit[target](toEditValue[target] + number)
 
+  const Operator = (o: string) => () => {
+    if (target == 1 && operator != "" && toOperate != "") {
+      setDisplay(parseCalcul(display, toOperate, o).toString())
+      setToOperate("")
+      setOperator("")
+    } else {
+
+      setOperator(o)
+      setTarget(1)
+    }
+  }
+
 
   useEffect(() => {
 
@@ -57,27 +69,23 @@ export default function App() {
 
       <Key action={() => {
         toEdit[target](display.slice(0, toEditValue[target].length - 1))
+        if (toEditValue[target].length == 1) {
+          toEdit[target]("")
+          setTarget(0)
+        }
       }} value={"DEL"} />
 
       <Key action={addNumber("4")} value={4} />
       <Key action={addNumber("5")} value={5} />
       <Key action={addNumber("6")} value={6} />
 
-      <Key action={() => {
-        if (operator == "") setMultiplier(false)
-        setOperator("+")
-        setTarget(1)
-      }} value={"+"} />
+      <Key action={Operator("+")} value={"+"} />
 
       <Key action={addNumber("1")} value={1} />
       <Key action={addNumber("2")} value={2} />
       <Key action={addNumber("3")} value={3} />
 
-      <Key action={() => {
-        if (operator == "") setMultiplier(false)
-        setOperator("-")
-        setTarget(1)
-      }} value={"-"} />
+      <Key action={Operator("-")} value={"-"} />
 
 
       <Key action={() => {
@@ -87,19 +95,10 @@ export default function App() {
 
       <Key action={addNumber("0")} value={0} />
 
-      <Key action={() => {
-        if (operator == "") setMultiplier(false)
-        setOperator("÷")
-        setTarget(1)
-      }} value={"÷"} />
+      <Key action={Operator("÷")} value={"÷"} />
 
       <Key
-        action={() => {
-          if (operator == "") setMultiplier(false)
-          setOperator("x")
-          setTarget(1)
-
-        }} value={"x"} />
+        action={Operator("x")} value={"x"} />
 
 
       <Key
