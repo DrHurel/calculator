@@ -48,7 +48,7 @@ export class Theme {
   /**
    * It sets the theme of the calculator by changing the CSS variables.
    */
-  setTheme() {
+  public setTheme() {
     this.root.style.setProperty('--body-background', this.bodyBackground);
     this.root.style.setProperty('--screen-background', this.screenBackground);
     this.root.style.setProperty('--keypad-background', this.keypadBackground);
@@ -72,11 +72,11 @@ export class Theme {
    * @param element - The element you want to change the color of.
    * @param property - The CSS property you want to change.
    */
-  specialTheme(color, element, property) {
+  public specialTheme(color, element, property) {
     this.specialThemeList.push({ element: element, property: property, color: color });
   }
 
-  public Root() {
-    this.root = document.querySelector(':root') as HTMLElement;
+  public Root(root) {
+    this.root = root
   }
 }
