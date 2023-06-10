@@ -1,0 +1,25 @@
+button {
+  width: 70%;
+  height: 70%;
+  border: none;
+  background-color: var(--regular-key-background);
+  color: var(--regular-key-text);
+  box-shadow: 0px 3px 0px 0px var(--regular-key-shadow);
+  font-weight: bold;
+  font-size: 1.5em;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  border-radius: 0.5rem;
+  align-self: center;
+  justify-self: center;
+
+  &:hover {
+    filter: brightness(140%);
+  }
+
+  &:active {
+    transform: translateY(3px);
+    box-shadow: 0px 0px 0px 0px var(--regular-key-shadow);
+  }
+}
