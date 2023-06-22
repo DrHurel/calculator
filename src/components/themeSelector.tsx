@@ -5,8 +5,8 @@ export function ThemeSelector() {
 
 
   return (<div>
-    <input type="range" min="0" max="2" step="1" id="them-selector" defaultValue="0"
-      index={0}
+    <input type="range" min={0} max={2} step={1} id="them-selector" defaultValue={0}
+
 
       onChange={(e) => {
         ThemeList[e.target.value].setTheme()

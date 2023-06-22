@@ -54,10 +54,10 @@ export default function App() {
       <ThemeSelector />
     </header>
 
-    <section>
-      <h1 id="left">
+    <section id="display">
+      <p id="left">
         {display}
-      </h1>
+      </p>
       <p id="operator">{operator}</p>
       <p id="right">{toOperate}</p>
     </section>
